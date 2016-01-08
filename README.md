@@ -34,3 +34,8 @@
     日常   //g-assets.daily.taobao.net/hema/lib/0.0.1/jquery/2.1.4/jquery.js     
     预发或线上  //g.alicdn.com/hema/lib/0.0.1/jquery/2.1.4/jquery.js 
 
+ *	jQuery 的表单验证和显示日期时间的组件
+
+ 1. 引用jquery.validate.js
+ 	日常	//g-assets.daily.taobao.net/hema/lib/0.0.1/jquery/2.1.4/jquery.validate.js
+ 	预发或线上	//g.alicdn.com/hema/lib/0.0.1/jquery/2.1.4/jquery.js 
