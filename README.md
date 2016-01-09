@@ -1,9 +1,7 @@
 ### 五道口前端公共文件库
 
 *  前端代码引用地址
-*  daily（不需要host） ：//g-assets.daily.taobao.net
-*  预发（host 10.101.73.189 g.alicdn.com） ：//g.alicdn.com
-*  线上（不需要host） //g.alicdn.com
+*  
 
 #### bootstrap 
 
