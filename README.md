@@ -43,7 +43,6 @@
     默认提示为英文，可以引用中文提示 //g-assets.daily.taobao.net/hema/lib/0.0.1/jquery/2.1.4/messages_zh.js
 
     1.1.1 将校验规则写在控件中
-
         ```html
         <script src="../js/jquery.js" type="text/javascript"></script>
         <script src="../js/jquery.validate.js" type="text/javascript"></script>
@@ -78,7 +77,6 @@
         ```
 
     1.1.2 将校验规则写在js代码中
-
         ```js
         $().ready(function() {
             $("#signupForm").validate({
@@ -117,17 +115,15 @@
             });
         });
         ```
-
         messages 处，如果某个控件没有 message，将调用默认的信息
 
- 2. 引用日期组件laydate.js<br>
+ 2. 引用日期组件laydate.js
  	日常	//g-assets.daily.taobao.net/hema/lib/0.0.1/jquery/2.1.4/dateTime.js<br>
- 	预发或线上	//g.alicdn.com/hema/lib/0.0.1/jquery/2.1.4/dateTime.js<br>
+ 	预发或线上	//g.alicdn.com/hema/lib/0.0.1/jquery/2.1.4/dateTime.js
 
     2.1 日期组件的使用
-        <br>
-    2.1.1 jQuery方式调用<br>
-
+    
+    2.1.1 jQuery方式调用
         ```js
         $(function(){
             $('#id').calendar();
