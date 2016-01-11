@@ -74,6 +74,7 @@
             <input class="submit" type="submit" value="Submit"/>
         </p>
     </form>
+    ```
 
     1.1.2 将校验规则写在js代码中
 
@@ -114,6 +115,7 @@
             }
         });
     });
+    ```
 
     messages 处，如果某个控件没有 message，将调用默认的信息
 
