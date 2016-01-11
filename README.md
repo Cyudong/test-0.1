@@ -39,82 +39,82 @@
  	预发或线上	//g.alicdn.com/hema/lib/0.0.1/jquery/2.1.4/jquery.validate.js<br>
 
  1.1 表单验证组件的使用方式<br>
-    默认提示为英文，可以引用中文提示 //g-assets.daily.taobao.net/hema/lib/0.0.1/jquery/2.1.4/messages_zh.js<br>
+        默认提示为英文，可以引用中文提示 //g-assets.daily.taobao.net/hema/lib/0.0.1/jquery/2.1.4/messages_zh.js<br>
     1.1.1 将校验规则写在控件中
     ```html
-        <script src="../js/jquery.js" type="text/javascript"></script>
-        <script src="../js/jquery.validate.js" type="text/javascript"></script>
-        <script src="../js/jquery.metadata.js" type="text/javascript"></script>
+    <script src="../js/jquery.js" type="text/javascript"></script>
+    <script src="../js/jquery.validate.js" type="text/javascript"></script>
+    <script src="../js/jquery.metadata.js" type="text/javascript"></script>
 
-        $().ready(function() {
-         $("#signupForm").validate();
-        });
+    $().ready(function() {
+     $("#signupForm").validate();
+    });
 
 
-        <form id="signupForm" method="get" action="">
-            <p>
-                <label for="firstname">Firstname</label>
-                <input id="firstname" name="firstname" class="required" />
-            </p>
-            <p>
-                <label for="email">E-Mail</label>
-                <input id="email" name="email" class="required email" />
-            </p>
-            <p>
-                <label for="password">Password</label>
-                <input id="password" name="password" type="password" class="{required:true,minlength:5}" />
-            </p>
-            <p>
-                <label for="confirm_password">确认密码</label>
-                <input id="confirm_password" name="confirm_password" type="password" class="{required:true,minlength:5,equalTo:'#password'}" />
-            </p>
-            <p>
-                <input class="submit" type="submit" value="Submit"/>
-            </p>
-        </form>
+    <form id="signupForm" method="get" action="">
+        <p>
+            <label for="firstname">Firstname</label>
+            <input id="firstname" name="firstname" class="required" />
+        </p>
+        <p>
+            <label for="email">E-Mail</label>
+            <input id="email" name="email" class="required email" />
+        </p>
+        <p>
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" class="{required:true,minlength:5}" />
+        </p>
+        <p>
+            <label for="confirm_password">确认密码</label>
+            <input id="confirm_password" name="confirm_password" type="password" class="{required:true,minlength:5,equalTo:'#password'}" />
+        </p>
+        <p>
+            <input class="submit" type="submit" value="Submit"/>
+        </p>
+    </form>
     ```
     1.1.2 将校验规则写在js代码中
     ```javascript
-        $().ready(function() {
-            $("#signupForm").validate({
-                rules: {
-                    firstname: "required",
-                    email: {
-                        required: true,
-                        email: true
-                    },
-                    password: {
-                        required: true,
-                        minlength: 5
-                    },
-                    confirm_password: {
-                        required: true,
-                        minlength: 5,
-                        equalTo: "#password"
-                    }
+    $().ready(function() {
+        $("#signupForm").validate({
+            rules: {
+                firstname: "required",
+                email: {
+                    required: true,
+                    email: true
                 },
-                messages: {
-                    firstname: "请输入姓名",
-                    email: {
-                        required: "请输入Email地址",
-                        email: "请输入正确的email地址"
-                    },
-                    password: {
-                        required: "请输入密码",
-                        minlength: jQuery.format("密码不能小于{0}个字 符")
-                    },
-                    confirm_password: {
-                        required: "请输入确认密码",
-                        minlength: "确认密码不能小于5个字符",
-                        equalTo: "两次输入密码不一致不一致"
-                    }
+                password: {
+                    required: true,
+                    minlength: 5
+                },
+                confirm_password: {
+                    required: true,
+                    minlength: 5,
+                    equalTo: "#password"
                 }
-            });
+            },
+            messages: {
+                firstname: "请输入姓名",
+                email: {
+                    required: "请输入Email地址",
+                    email: "请输入正确的email地址"
+                },
+                password: {
+                    required: "请输入密码",
+                    minlength: jQuery.format("密码不能小于{0}个字 符")
+                },
+                confirm_password: {
+                    required: "请输入确认密码",
+                    minlength: "确认密码不能小于5个字符",
+                    equalTo: "两次输入密码不一致不一致"
+                }
+            }
         });
+    });
     ```
         messages 处，如果某个控件没有 message，将调用默认的信息
 
- 2. 引用日期组件laydate.js
+ 2. 引用日期组件laydate.js<br>
  	日常	//g-assets.daily.taobao.net/hema/lib/0.0.1/jquery/2.1.4/dateTime.js<br>
  	预发或线上	//g.alicdn.com/hema/lib/0.0.1/jquery/2.1.4/dateTime.js
 
@@ -159,17 +159,17 @@
     2.1.4 日期范围限制
         1. 静态限制
     ```javascript
-        /*限制日期的范围是 2012-03-08到2012-05-27 (注意minDate和maxDate的格式一定要是yyyy-MM-dd)*/<br>
+        /*限制日期的范围是 2012-03-08到2012-05-27 (注意minDate和maxDate的格式一定要是yyyy-MM-dd)*/
         $.calendar({ minDate:'2012-03-08', maxDate:'2012-05-27' });
     ```
         2. 动态限制
     ```javascript
-        /*只能选择今天以后的日期，包括今天*/<br>
+        /*只能选择今天以后的日期，包括今天*/
         $.calendar({ maxDate:'%y-%M-%d' });
     ```
         3. 只能选择今天以后的日期(不包括今天)
     ```javascript
-        /*参数noToday为true时指不包括今天，为false或不写此参数为包括今天*/<br>
+        /*参数noToday为true时指不包括今天，为false或不写此参数为包括今天*/
         $.calendar({ minDate:'%y-%M-%d', noToday:true });
     ```
         4. 只能选择当前年当前月3号到2014年12前月的当前天之间的日期
@@ -178,47 +178,47 @@
     ```
         5. 前面的日期不能大于后面的日期
     ```javascript
-        $.calendar({ maxDate:'#inp12' });<br>
+        $.calendar({ maxDate:'#inp12' });
         $.calendar({ minDate:'#inp11' });
     ```
         6. 前面的日期不能大于后面的日期(targetFormat参数示例)
     ```javascript
-        $.calendar({ maxDate:'#inp14', format:'yyyyMMdd', targetFormat:'yyyy年MM月dd日' });<br>
+        $.calendar({ maxDate:'#inp14', format:'yyyyMMdd', targetFormat:'yyyy年MM月dd日' });
         $.calendar({ minDate:'#inp13', format:'yyyy年MM月dd日', targetFormat:'yyyyMMdd' });
     ```
         7. 无效周(可以使用此功能禁用周日至周六所对应的日期,相关属性:disWeek (0至6 分别代表 周日至周六))
     ```javascript
-        $.calendar({ disWeek:'6' });<br>
+        $.calendar({ disWeek:'6' });
         $.calendar({ disWeek:'0,4' });
     ```
     2.1.5 无效日期(可以使用此功能禁用,所指定的一个或多个日期)
-        1. 禁用每个月份的 5日 15日 25日<br>
-        ```javascript
-        /*'5$' 表示以 5 结尾 注意 $ 的用法*/<br>
+        1. 禁用每个月份的 5日 15日 25日
+    ```javascript
+        /*'5$' 表示以 5 结尾 注意 $ 的用法*/
         $.calendar({ disDate:['5$'] });
-        ```
-        2. 禁用所有早于2000-01-01的日期<br>
-        ```javascript
+    ```
+        2. 禁用所有早于2000-01-01的日期
+    ```javascript
         $.calendar({ disDate:['^19'] });
-        ```
-        3. 禁用2012-05-05 和 2012-05-24<br>
-        ```javascript
+    ```
+        3. 禁用2012-05-05 和 2012-05-24
+    ```javascript
         $.calendar({ disDate:['2012-05-05','2012-05-24'] });
-        ```
-        4. 禁用2012-所有月份-04 和 2012-05-29<br>
-        ```javascript
+    ```
+        4. 禁用2012-所有月份-04 和 2012-05-29
+    ```javascript
         $.calendar({ disDate:['2012-..-04','2012-05-29'] });
-        ```
-        5. 禁用[2000至2008]-05-01 和 2012-03-29<br>
-        ```javascript
+    ```
+        5. 禁用[2000至2008]-05-01 和 2012-03-29
+    ```javascript
         $.calendar({ disDate:['200[0-8]-05-01','2012-03-29'] });
-        ```
-        6. 禁用所有年份和所有月份的第7天和今天<br>
-        ```javascript
+    ```
+        6. 禁用所有年份和所有月份的第7天和今天
+    ```javascript
         $.calendar({ disDate:['....-..-07','%y-%M-%d'] });
-        ```
+    ```
     2.1.6 有效日期(启用少部分日期,enDate 默认为false, 为true时,无效日期变成有效日期)
-        1. 启用 每个月份的 5日 15日 25日<br>
-        ```javascript
+        1. 启用 每个月份的 5日 15日 25日
+    ```javascript
         $.calendar({ disDate:['5$'], enDate:true });
-        ```
+    ```
