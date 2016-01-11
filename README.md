@@ -77,7 +77,7 @@
         ```
 
     1.1.2 将校验规则写在js代码中
-        ```js
+        ```javascript
         $().ready(function() {
             $("#signupForm").validate({
                 rules: {
@@ -161,7 +161,7 @@
         | yy年M月     | 08年3月     |
         | yyyyMMdd     | 20080312     |
         | MM/dd/yyyy     | 03/12/2008     |
-        
+
     2.1.4 日期范围限制
 
         1. 静态限制<br>
