@@ -38,10 +38,11 @@
  	日常	//g-assets.daily.taobao.net/hema/lib/0.0.1/jquery/2.1.4/jquery.validate.js<br>
  	预发或线上	//g.alicdn.com/hema/lib/0.0.1/jquery/2.1.4/jquery.validate.js<br>
 
- >>1.1 表单验证组件的使用方式
+ 1.1 表单验证组件的使用方式
+
     默认提示为英文，可以引用中文提示 //g-assets.daily.taobao.net/hema/lib/0.0.1/jquery/2.1.4/messages_zh.js<br>
-    >1.1.1 将校验规则写在控件中
-    ```js
+    1.1.1 将校验规则写在控件中
+    ```html
     <script src="../js/jquery.js" type="text/javascript"></script>
     <script src="../js/jquery.validate.js" type="text/javascript"></script>
     <script src="../js/jquery.metadata.js" type="text/javascript"></script>
@@ -56,25 +57,25 @@
             <label for="firstname">Firstname</label>
             <input id="firstname" name="firstname" class="required" />
         </p>
-     <p>
-      <label for="email">E-Mail</label>
-      <input id="email" name="email" class="required email" />
-     </p>
-     <p>
-      <label for="password">Password</label>
-      <input id="password" name="password" type="password" class="{required:true,minlength:5}" />
-     </p>
-     <p>
-      <label for="confirm_password">确认密码</label>
-      <input id="confirm_password" name="confirm_password" type="password" class="{required:true,minlength:5,equalTo:'#password'}" />
-     </p>
+        <p>
+            <label for="email">E-Mail</label>
+            <input id="email" name="email" class="required email" />
+        </p>
+        <p>
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" class="{required:true,minlength:5}" />
+        </p>
+        <p>
+            <label for="confirm_password">确认密码</label>
+            <input id="confirm_password" name="confirm_password" type="password" class="{required:true,minlength:5,equalTo:'#password'}" />
+        </p>
         <p>
             <input class="submit" type="submit" value="Submit"/>
         </p>
     </form>
 
-    >1.1.2 将校验规则写在js代码中
-    ```js
+    1.1.2 将校验规则写在js代码中
+    ```javascript
     $().ready(function() {
         $("#signupForm").validate({
             rules: {
