@@ -76,8 +76,8 @@
     </form>
 
     1.1.2 将校验规则写在js代码中
-    
-    ```javascript
+
+    ```js
     $().ready(function() {
         $("#signupForm").validate({
             rules: {
