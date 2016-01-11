@@ -124,3 +124,96 @@
  	预发或线上	//g.alicdn.com/hema/lib/0.0.1/jquery/2.1.4/laydate/laydate.js<br>
 
     2.1 日期组件的使用
+
+    2.1.1 jQuery方式调用
+        ```js
+        $(function(){
+            $('#id').calendar();
+        });
+        ```
+    2.1.2 id参数方式调用
+        ```javascript
+        $.calendar({ id:'#id' });
+        ```
+    2.1.3 是否显示底部的按钮栏和时间
+        ```javascript
+        $.calendar({ format:'yyyy年MM月dd日 HH时mm分ss秒' });
+        ```
+        <p>日期格式表</p>
+        <table width="100%" border="0" cellspacing="1" bgcolor="#000000">
+            <tr>
+                <th width="12%">格式</th>
+                <th width="88%">说明</th>
+            </tr>
+            <tr>
+                <td align="center">yy</td>
+                <td>将年份表示为二位数字。</td>
+            </tr>
+            <tr>
+                <td align="center">yyyy</td>
+                <td>将年份表示为四位数字。如果少于四位数，前面补零。</td>
+            </tr>
+            <tr>
+                <td align="center">M</td>
+                <td>将月份表示为从 1 至 12 的数字</td>
+            </tr>
+            <tr>
+                <td align="center">MM</td>
+                <td>同上，如果小于两位数，前面补零。</td>
+            </tr>
+            <tr>
+                <td align="center">d</td>
+                <td>将月中日期表示为从 1 至 31 的数字。</td>
+            </tr>
+            <tr>
+                <td align="center">dd</td>
+                <td>同上，如果小于两位数，前面补零。</td>
+            </tr>
+            <tr>
+                <td align="center">H </td>
+                <td>将小时表示为从 0 至 23 的数字。</td>
+            </tr>
+            <tr>
+                <td align="center">HH</td>
+                <td>同上，如果小于两位数，前面补零。</td>
+            </tr>
+            <tr>
+                <td align="center">m</td>
+                <td>将分钟表示为从 0 至 59 的数字。</td>
+            </tr>
+            <tr>
+                <td align="center">mm</td>
+                <td>同上，如果小于两位数，前面补零。</td>
+            </tr>
+            <tr>
+                <td align="center">s</td>
+                <td>将秒表示为从 0 至 59 的数字。</td>
+            </tr>
+            <tr>
+                <td align="center">ss</td>
+                <td>同上，如果小于两位数，前面补零。</td>
+            </tr>
+        </table>
+        <p>示例(只列出了常用的几种格式，如需要其它格式请自行设置)</p>
+        <table width="100%" border="0" cellspacing="1" bgcolor="#000000">
+            <tr>
+                <th width="191">格式字符串</th>
+                <th>值</th>
+            </tr>
+            <tr>
+                <td align="center">yyyy-MM-dd HH:mm:ss</td>
+                <td>2008-03-12 19:20:00</td>
+            </tr>
+            <tr>
+                <td align="center">yy年M月</td>
+                <td>08年3月</td>
+            </tr>
+            <tr>
+                <td align="center">yyyyMMdd</td>
+                <td>20080312</td>
+            </tr>
+            <tr>
+                <td align="center">MM/dd/yyyy</td>
+                <td>03/12/2008</td>
+            </tr>
+        </table>
