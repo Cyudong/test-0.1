@@ -40,7 +40,8 @@
 
  1.1 表单验证组件的使用方式
 
-    默认提示为英文，可以引用中文提示 //g-assets.daily.taobao.net/hema/lib/0.0.1/jquery/2.1.4/messages_zh.js<br>
+    默认提示为英文，可以引用中文提示 //g-assets.daily.taobao.net/hema/lib/0.0.1/jquery/2.1.4/messages_zh.js
+
     1.1.1 将校验规则写在控件中
     ```html
     <script src="../js/jquery.js" type="text/javascript"></script>
@@ -75,6 +76,7 @@
     </form>
 
     1.1.2 将校验规则写在js代码中
+    
     ```javascript
     $().ready(function() {
         $("#signupForm").validate({
