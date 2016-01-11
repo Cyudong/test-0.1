@@ -121,4 +121,6 @@
 
  2. 引用日期组件laydate.js<br>
  	日常	//g-assets.daily.taobao.net/hema/lib/0.0.1/jquery/2.1.4/laydate/laydate.js<br>
- 	预发或线上	//g.alicdn.com/hema/lib/0.0.1/jquery/2.1.4/laydate/laydate.js
+ 	预发或线上	//g.alicdn.com/hema/lib/0.0.1/jquery/2.1.4/laydate/laydate.js<br>
+
+    2.1 日期组件的使用
