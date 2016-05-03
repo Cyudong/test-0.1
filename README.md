@@ -1,45 +1,39 @@
 ### 五道口前端公共文件库
 
 *  前端代码引用地址
-*  
+*
 
-#### bootstrap 
+#### bootstrap
 
 
-*   [bootstrap文档](http://www.bootcss.com/)    
+*   [bootstrap文档](http://www.bootcss.com/)
 
-1.  引用bootstrap的js        
-    日常  //g-assets.daily.taobao.net/hema/lib/0.0.1/bootstrap/bootstrap.js        
-    预发或线上  //g.alicdn.com/hema/lib/0.0.1/bootstrap/bootstrap.js      
+1.  引用bootstrap的js
 
-2.  引用bootstrap的css     
-    日常  //g-assets.daily.taobao.net/hema/lib/0.0.1/bootstrap/bootstrap.css     
-    预发或线上  //g.alicdn.com/hema/lib/0.0.1/bootstrap/bootstrap.css      
 
-3.  引用bootstrap-theme的css          
-    日常  //g-assets.daily.taobao.net/hema/lib/0.0.1/bootstrap/bootstrap-theme.css     
-    预发或线上  //g-assets.daily.taobao.net/hema/lib/0.0.1/bootstrap/bootstrap-theme.css    
+2.  引用bootstrap的css
 
-#### jQuery     
 
- * jQuery 2.0版本以下支持ie低版本浏览器 2.0以上不支持      
- 
- 1. 引用1.11.3版本      
-    日常   //g-assets.daily.taobao.net/hema/lib/0.0.1/jquery/1.11.3/jquery.js         
-    预发或线上  //g.alicdn.com/hema/lib/0.0.1/jquery/1.11.3/jquery.js     
-    
- 2. 引用2.1.4版本      
-    日常   //g-assets.daily.taobao.net/hema/lib/0.0.1/jquery/2.1.4/jquery.js     
-    预发或线上  //g.alicdn.com/hema/lib/0.0.1/jquery/2.1.4/jquery.js 
+3.  引用bootstrap-theme的css
+
+
+#### jQuery
+
+ * jQuery 2.0版本以下支持ie低版本浏览器 2.0以上不支持
+
+ 1. 引用1.11.3版本
+
+
+ 2. 引用2.1.4版本
+
 
  *	jQuery 的表单验证和显示日期时间的组件
 
  1. 引用jquery.validate.js<br>
- 	日常	//g-assets.daily.taobao.net/hema/lib/0.0.1/jquery/2.1.4/jquery.validate.js<br>
- 	预发或线上	//g.alicdn.com/hema/lib/0.0.1/jquery/2.1.4/jquery.validate.js<br>
+
 
  1.1 表单验证组件的使用方式<br>
-        默认提示为英文，可以引用中文提示 //g-assets.daily.taobao.net/hema/lib/0.0.1/jquery/2.1.4/messages_zh.js<br>
+
     1.1.1 将校验规则写在控件中
     ```html
     <script src="../js/jquery.js" type="text/javascript"></script>
@@ -115,11 +109,10 @@
         messages 处，如果某个控件没有 message，将调用默认的信息
 
  2. 引用日期组件laydate.js<br>
- 	日常	//g-assets.daily.taobao.net/hema/lib/0.0.1/jquery/2.1.4/dateTime.js<br>
- 	预发或线上	//g.alicdn.com/hema/lib/0.0.1/jquery/2.1.4/dateTime.js
+
 
     2.1 日期组件的使用
-    
+
     2.1.1 jQuery方式调用
     ```javascript
         $(function(){
@@ -157,7 +150,7 @@
     | yyyyMMdd     | 20080312     |
     | MM/dd/yyyy     | 03/12/2008     |
     2.1.4 日期范围限制
-    
+
         1. 静态限制
     ```javascript
         /*限制日期的范围是 2012-03-08到2012-05-27 (注意minDate和maxDate的格式一定要是yyyy-MM-dd)*/
@@ -193,7 +186,7 @@
         $.calendar({ disWeek:'0,4' });
     ```
     2.1.5 无效日期(可以使用此功能禁用,所指定的一个或多个日期)
-    
+
         1. 禁用每个月份的 5日 15日 25日
     ```javascript
         /*'5$' 表示以 5 结尾 注意 $ 的用法*/
@@ -220,7 +213,7 @@
         $.calendar({ disDate:['....-..-07','%y-%M-%d'] });
     ```
     2.1.6 有效日期(启用少部分日期,enDate 默认为false, 为true时,无效日期变成有效日期)
-    
+
         1. 启用 每个月份的 5日 15日 25日
     ```javascript
         $.calendar({ disDate:['5$'], enDate:true });
